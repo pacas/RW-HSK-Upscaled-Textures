@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-    <Operation Class="PatchOperationReplace">
-        <xpath>Defs/ThingDef[defName="MendingKit"]/graphicData/graphicClass</xpath>
-        <value>
-            <graphicClass>Graphic_StackCount</graphicClass>
-        </value>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>HMC Vile's Pre-Industrial Overhaul</li>
+        </mods>
+        <nomatch Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="MendingKit"]/graphicData/graphicClass</xpath>
+                    <value>
+                        <graphicClass>Graphic_StackCount</graphicClass>
+                    </value>
+                </li>
+            </operations>
+        </nomatch>
     </Operation>
 </Patch>

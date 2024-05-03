@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-    <Operation Class="PatchOperationReplace">
-        <xpath>Defs/ThingDef[defName="ChJAndroidPrinter"]/size</xpath>
-        <value>
-            <size>2,3</size>
-        </value>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Androids</li>
+        </mods>
+        <match Class="PatchOperationSequence">
+            <operations>
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="ChJAndroidPrinter"]/size</xpath>
+                    <value>
+                        <size>2,3</size>
+                    </value>
+                </li>
+            </operations>
+        </match>
     </Operation>
 </Patch>
