@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+        
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="WaterButt"]/graphicData/drawSize</xpath>
+                <value>
+                    <drawSize>(1,1)</drawSize>
+                </value>
+            </li>
+        
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="Biosolids"]/graphicData/graphicClass</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="Biosolids"]/graphicData</xpath>
+                    <value>
+                        <graphicClass>Graphic_StackCount</graphicClass>
+                    </value>
+                </nomatch>
+                <match Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Biosolids"]/graphicData/graphicClass</xpath>
+                    <value>
+                        <graphicClass>Graphic_StackCount</graphicClass>
+                    </value>
+                </match>
+            </li>
+            
+            <li Class="PatchOperationConditional">
+                <xpath>Defs/ThingDef[defName="PrimitiveWell"]/graphicData/shaderType</xpath>
+                <nomatch Class="PatchOperationAdd">
+                    <xpath>Defs/ThingDef[defName="PrimitiveWell"]/graphicData</xpath>
+                    <value>
+                        <shaderType>CutoutComplex</shaderType>
+                    </value>
+                </nomatch>
+                <match Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="PrimitiveWell"]/graphicData/shaderType</xpath>
+                    <value>
+                        <shaderType>CutoutComplex</shaderType>
+                    </value>
+                </match>
+            </li>
+            
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="WaterButt"]/graphicData</xpath>
+                <value>
+                    <graphicData>
+                        <texPath>Things/Building/BarellWatter</texPath>
+                        <graphicClass>Graphic_Single</graphicClass>
+                    </graphicData>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+
+
+</Patch>
