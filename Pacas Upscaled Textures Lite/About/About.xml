@@ -13,8 +13,10 @@
 	<loadAfter>
 		<li>skyarkhangel.HSK</li>
 	</loadAfter>
+	<loadBefore>
+		<li>xenomacabre.HSKBiomes</li>
+	</loadBefore>
 	<incompatibleWith>
 		<li>NimeBeer.florareskin</li>
-		<li>xenomacabre.HSKBiomes</li>
 	</incompatibleWith>
 </ModMetaData>
